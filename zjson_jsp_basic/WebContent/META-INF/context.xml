@@ -1,0 +1,37 @@
+<Context> 
+   <!--
+    	ch13_6_jstl_sql_ex.jsp 에서 JSTL sql 로 설정하였으므로 주석처리함. 
+	  <Resource name="jdbc/zOracleDB" 
+	   auth="Container"
+	   type="javax.sql.DataSource" 
+	   username="zspring" 
+	   password="5799"
+	   driverClassName="oracle.jdbc.driver.OracleDriver"
+	   factory="org.apache.tomcat.dbcp.dbcp.BasicDataSourceFactory"
+	   url="jdbc:oracle:thin:@127.0.0.1:1521:XE"
+	   maxActive="500" 
+	   maxIdle="100"/>   
+    -->
+<!--  
+http://okky.kr/article/302438
+
+톰캣 8.0 버전 쓸때 context.xml 파일의 팩토리를
+
+factory="org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory" 이렇게 썼었는데요.
+
+톰캣 7.0에서는 factory="org.apache.tomcat.dbcp.dbcp.BasicDataSourceFactory" 이렇게
+
+써야 되네요. decp2를 decp로... ㄷㄷ..
+-->    
+	  <Resource name="jdbc/ZORACLEDB" 
+	   auth="Container"
+	   type="javax.sql.DataSource" 
+	   username="system" 
+	   password="tiger"	   
+	   driverClassName="oracle.jdbc.driver.OracleDriver"
+	   factory="org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory"
+	   url="jdbc:oracle:thin:@localhost:1521:XE"
+	   maxActive="500" 
+	   maxIdle="100"/>       
+       
+</Context>
