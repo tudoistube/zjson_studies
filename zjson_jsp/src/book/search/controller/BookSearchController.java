@@ -35,7 +35,7 @@ public class BookSearchController extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		// 한글 인코딩 
-		request.setCharacterEncoding("euc-kr");
+		request.setCharacterEncoding("UTF-8");
 		
 		// 분기에 사용할 객체 준비
 				ActionForward 		forwardAction 	= 	null; // 단순 이동에 사용할 객체

@@ -26,7 +26,7 @@ public class BookSearchAction implements ActionInterface {
 		System.out.println("검색할 책 이름 : " + book);
 		
 		// 요청할 주소를 넣으세요
-		String url = "https://apis.daum.net/search/book?apikey=3250431f017bec03f26cc7781dfca95b&q=다음카카오&output=json";
+		String url = "https://apis.daum.net/search/book?apikey=3250431f017bec03f26cc7781dfca95b&q=CSS&output=json";
 		
 		// 다음 서버로 부터 json 받아오기 
 		String json = HttpClientGet.get_JSONDATA(url);	
@@ -86,12 +86,12 @@ public class BookSearchAction implements ActionInterface {
 		{
 			JSONObject imsi = (JSONObject) item.get(i);
 			
-			String author = (String)imsi.get("author_t");
+			String book_author = (String)imsi.get("author_t");
 			String book_img = (String)imsi.get("cover_s_url");
 			String book_sale_price = (String)imsi.get("sale_price");
 			String book_description = (String)imsi.get("description");
 		
-			BookDTO bookDto = new BookDTO(author, book_img, book_sale_price, book_description);
+			BookDTO bookDto = new BookDTO(book_author, book_img, book_sale_price, book_description);
 			
 			bookList.add(bookDto);
 				

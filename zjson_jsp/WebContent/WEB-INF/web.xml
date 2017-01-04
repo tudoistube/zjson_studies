@@ -17,6 +17,6 @@
   </servlet-mapping>
   <servlet>
     <servlet-name>bookSearch</servlet-name>
-    <servlet-class>bookSearch.controller.BookSearchController</servlet-class>
+    <servlet-class>book.search.controller.BookSearchController</servlet-class>
   </servlet>
 </web-app>
