@@ -1,12 +1,4 @@
-#JSON on from Java application to Spring web... : master ^ ^  
-
-#List of Branches  
-
-##java_app : basic usage of json in java application.  
-*I studied this from this Document : [PaJamasi Java | 01.JSON이란?... ](http://blog.naver.com/pajamasi/220554189537 "summarized by tudoistube@gmail" )  
-
-##jsp_web : basic usage of json in jsp web dynamic project.  
-*I studied this from this Document : [PaJamasi Java | JSP 프로젝트에서 DAUM API 연동하여... ](http://blog.naver.com/pajamasi/220556608962 "summarized by tudoistube@gmail" )  
+#JSON on from Java application to Spring web... : recipe ^ ^  
 
 ##jsp_web_00 : recipe to be cooked with json in jsp web dynamic project.  
 
