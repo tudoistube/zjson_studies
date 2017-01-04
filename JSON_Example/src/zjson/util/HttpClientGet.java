@@ -1,4 +1,4 @@
-package zjon.util;
+package zjson.util;
 
 import java.io.BufferedReader;
 import java.io.IOException;

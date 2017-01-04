@@ -9,38 +9,38 @@ public class Json_Ex005_ParsingJsonArray {
 									
 	public static void main(String[] args) throws ParseException								
 	{								
-		/** JSON DATA »ı¼º ºÎºĞ*/							
-		//...JSON DATA »ı¼ºÀº °¡Àå ¾Æ·¡ level ¿¡¼­ »ı¼ºÇÔ.							
-		//             Parsing Àº °¡Àå top level ¿¡¼­ ºÎÅÍ Á¢±ÙÇÔ.							
+		/** JSON DATA ìƒì„± ë¶€ë¶„*/							
+		//...JSON DATA ìƒì„±ì€ ê°€ì¥ ì•„ë˜ level ì—ì„œ ìƒì„±í•¨.							
+		//             Parsing ì€ ê°€ì¥ top level ì—ì„œ ë¶€í„° ì ‘ê·¼í•¨.							
 									
-		//...JSONObject ´Â À¯ÀÏÇÑ Å°¿Í Å°°ªÀÇ Á¶ÇÕÀ» ¸¸µê.							
+		//...JSONObject ëŠ” ìœ ì¼í•œ í‚¤ì™€ í‚¤ê°’ì˜ ì¡°í•©ì„ ë§Œë“¦.							
 		JSONObject data1 = new JSONObject();							
-		data1.put("name", "½Å»ç");							
+		data1.put("name", "ì‹ ì‚¬");							
 		data1.put("age", "52");							
 									
 									
 		JSONObject data2 = new JSONObject();							
-		data2.put("name", "¼÷³à");							
+		data2.put("name", "ìˆ™ë…€");							
 		data2.put("age", "42");							
 									
 									
 		//JSON Array							
-		//...JSON Àº MAP ±¸Á¶¸¦ »ç¿ëÇÏ¹Ç·Î Áßº¹µÈ Key °ªÀ» °¡Áú ¼ö ¾øÀ½.							
-		//   JSONArray ´Â ÀÌ·¯ÇÑ MAP ±¸Á¶¸¦ »ç¿ëÇÑ JSON ÀÇ Æ¯¼ºÀ» ÇØ°áÇØ¼­ Áßº¹µÈ Key °ªÀ» °¡Áø µ¥ÀÌÅÍ¸¦ ÀúÀåÇÒ ¼ö ÀÖÀ½.							
+		//...JSON ì€ MAP êµ¬ì¡°ë¥¼ ì‚¬ìš©í•˜ë¯€ë¡œ ì¤‘ë³µëœ Key ê°’ì„ ê°€ì§ˆ ìˆ˜ ì—†ìŒ.							
+		//   JSONArray ëŠ” ì´ëŸ¬í•œ MAP êµ¬ì¡°ë¥¼ ì‚¬ìš©í•œ JSON ì˜ íŠ¹ì„±ì„ í•´ê²°í•´ì„œ ì¤‘ë³µëœ Key ê°’ì„ ê°€ì§„ ë°ì´í„°ë¥¼ ì €ì¥í•  ìˆ˜ ìˆìŒ.							
 		JSONArray jsonArray = new JSONArray();							
 									
-		//json data Ãß°¡							
+		//json data ì¶”ê°€							
 		jsonArray.add(data1);							
 		jsonArray.add(data2);							
 									
-		// itemÀ¸·Î ¹­±â							
-		//...itemlist ¶ó´Â key ÀÇ Á¶ÇÕÀ¸·Î ¹­ÀÌ¹Ç·Î JSONObject À¸·Î ´ãÀ» ¼ö ÀÖÀ½.							
+		// itemìœ¼ë¡œ ë¬¶ê¸°							
+		//...itemlist ë¼ëŠ” key ì˜ ì¡°í•©ìœ¼ë¡œ ë¬¶ì´ë¯€ë¡œ JSONObject ìœ¼ë¡œ ë‹´ì„ ìˆ˜ ìˆìŒ.							
 		JSONObject item = new JSONObject();							
 		item.put("itemlist", jsonArray);							
 									
 									
-		// items ¶ó´Â ÀÌ¸§À¸·Î itemlist ³Ö±â							
-		//...items ¶ó´Â key ÀÇ Á¶ÇÕÀ¸·Î ¹­ÀÌ¹Ç·Î JSONObject À¸·Î ´ãÀ» ¼ö ÀÖÀ½.							
+		// items ë¼ëŠ” ì´ë¦„ìœ¼ë¡œ itemlist ë„£ê¸°							
+		//...items ë¼ëŠ” key ì˜ ì¡°í•©ìœ¼ë¡œ ë¬¶ì´ë¯€ë¡œ JSONObject ìœ¼ë¡œ ë‹´ì„ ìˆ˜ ìˆìŒ.							
 		JSONObject json = new JSONObject();							
 		json.put("items", item);							
 									
@@ -48,30 +48,30 @@ public class Json_Ex005_ParsingJsonArray {
 		String strJson = json.toJSONString();							
 		System.out.println(strJson);							
 									
-		/*°á°ú :  °°Àº Å°¸¦ °¡Áø µ¥ÀÌÅÍµéÀÌ ¹İº¹µÇ°í ÀÖ¾î¼­ JSONArray ¸¦ »ç¿ëÇØ¾ß ÇÔ.							
+		/*ê²°ê³¼ :  ê°™ì€ í‚¤ë¥¼ ê°€ì§„ ë°ì´í„°ë“¤ì´ ë°˜ë³µë˜ê³  ìˆì–´ì„œ JSONArray ë¥¼ ì‚¬ìš©í•´ì•¼ í•¨.							
 		* {"items":							
 		*		{"itemlist":					
 		*				[			
-		*					{"name":"¼­¿ï","age":"10"},		
-		*					{"name":"´ëÀü","age":"20"}		
+		*					{"name":"ì„œìš¸","age":"10"},		
+		*					{"name":"ëŒ€ì „","age":"20"}		
 		*				]			
 		*		}					
 		* }							
 		*/							
 									
 									
-		/** ÆÄ½Ì ÇÏ±â */							
+		/** íŒŒì‹± í•˜ê¸° */							
 		JSONParser paser = new JSONParser();							
 									
-		// ÆÄ½Ì							
+		// íŒŒì‹±							
 		JSONObject json_obj = (JSONObject) paser.parse(strJson);							
 									
-		//´Ü°èº° Á¢±Ù items °¡Á®¿À±â							
+		//ë‹¨ê³„ë³„ ì ‘ê·¼ items ê°€ì ¸ì˜¤ê¸°							
 		JSONObject json_obj_items = (JSONObject) json_obj.get("items");							
 									
-		// itemlist °¡Á®¿À±â itemlist ÀÇ °æ¿ì typeÀÌ list ÀÌ´Ù.							
-		// ÀÌÀ¯´Â itemlist : µÚ¿¡ "[" ·Î ¹è¿­·Î Ç¥½ÃµÇ¾îÀÖ´Ù.							
-		System.out.println("itemlistÀÇ Å¸ÀÔ : "+json_obj_items.get("itemlist").getClass());							
+		// itemlist ê°€ì ¸ì˜¤ê¸° itemlist ì˜ ê²½ìš° typeì´ list ì´ë‹¤.							
+		// ì´ìœ ëŠ” itemlist : ë’¤ì— "[" ë¡œ ë°°ì—´ë¡œ í‘œì‹œë˜ì–´ìˆë‹¤.							
+		System.out.println("itemlistì˜ íƒ€ì… : "+json_obj_items.get("itemlist").getClass());							
 									
 									
 		JSONArray json_arr_itemlist = (JSONArray) json_obj_items.get("itemlist");							
@@ -82,7 +82,7 @@ public class Json_Ex005_ParsingJsonArray {
 			String name = (String) imsi.get("name");						
 			String age = (String) imsi.get("age");						
 									
-			System.out.println("¹è¿­ÀÇ "+i+"¹øÂ° ¿ä¼Ò");						
+			System.out.println("ë°°ì—´ì˜ "+i+"ë²ˆì§¸ ìš”ì†Œ");						
 			System.out.println("name : "+name);						
 			System.out.println("age : "+age);						
 		}							

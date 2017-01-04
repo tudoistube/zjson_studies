@@ -8,7 +8,7 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
-import zjon.util.HttpClientGet;
+import zjson.util.HttpClientGet;
 
 public class Json_Ex006_ParsingDaum {
 
@@ -16,7 +16,7 @@ public class Json_Ex006_ParsingDaum {
 	{
 		
 		// 요청할 주소를 넣으세요
-		String url = "https://apis.daum.net/search/book?apikey=3250431f017bec03f26cc7781dfca95b&q=다음카카오&output=json";
+		String url = "https://apis.daum.net/search/book?apikey=3250431f017bec03f26cc7781dfca95b&q=CSS&output=json";
 		
 		// 다음 서버로 부터 json 받아오기 
 		String json = HttpClientGet.get_JSONDATA(url);
