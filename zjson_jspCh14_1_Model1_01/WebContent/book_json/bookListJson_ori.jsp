@@ -8,10 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<%
 
-	
-%>
 <table border="1" width="600">
 
 	<tr>

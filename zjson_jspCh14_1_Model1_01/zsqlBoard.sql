@@ -25,11 +25,14 @@ create table zjson_book(
     book_num number,
 	book_isbn varchar2(120),
 	book_title varchar2(120),
-	book_author varchar2(20),
+	book_author varchar2(120),
 	book_img varchar2(2000),
 	book_sale_price number,
 	book_description varchar2(2000),
+	book_date date default sysdate,
 	primary key(book_num)
 );
 
 select * from zjson_book;
+select book_title, book_date from zjson_book;
+delete from zjson_book;

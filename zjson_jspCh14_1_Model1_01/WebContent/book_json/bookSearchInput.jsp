@@ -8,7 +8,7 @@
 </head>
 <body>
 
-	<form method="post" action="./BookJsonListAction.bo">
+	<form method="post" action="BookListJsonPOST.yes">
 		 책이름 : <input type="text" name="bookName"/><br/>
 		 <input type="submit" value="검색"/>
 		 <input type="reset" value="취소"/>

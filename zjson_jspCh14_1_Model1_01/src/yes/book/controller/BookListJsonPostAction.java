@@ -1,4 +1,4 @@
-package net.board.action;
+package yes.book.controller;
 
 import java.util.*;
 
@@ -10,22 +10,24 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
-import net.board.db.BoardDAO;
+import net.board.action.Action;
+import net.board.action.ActionForward;
 import yes.book.dto.BookDTO;
 import zjson.util.HttpClientGet;
 
-public class BookJsonListAction implements Action {
+public class BookListJsonPostAction implements Action {
 	 
 	 public ActionForward execute(HttpServletRequest request,HttpServletResponse response) throws Exception{
 		 
 		//...get json-data from daum api.
 		String key = "3250431f017bec03f26cc7781dfca95b"; //...자신의 api key 를 넣음.
-		String book = request.getParameter("bookName");
-		System.out.println("검색할 책 이름 : " + book);		 
+		String bookName = request.getParameter("bookName");
+		request.setAttribute("bookName", bookName);
+		System.out.println("검색할 책 이름 : " + bookName);		 
 		 
 		// 요청할 주소를 넣으세요
 		//String url = "https://apis.daum.net/search/book?apikey=3250431f017bec03f26cc7781dfca95b&q=CSS&output=json";
-		String url = "https://apis.daum.net/search/book?apikey="+key+"&q="+book+"&output=json";
+		String url = "https://apis.daum.net/search/book?apikey="+key+"&q="+bookName+"&output=json";
 		
 		// 다음 서버로 부터 json 받아오기 
 		String json = HttpClientGet.get_JSONDATA(url);	
@@ -54,7 +56,7 @@ public class BookJsonListAction implements Action {
 			//...Dispatcher 설정.
 			zaction.setRedirect(false);
 			//...이동할 페이지.
-			zaction.setPath("./board/bookJsonList.jsp");
+			zaction.setPath("./book_json/bookListJson.jsp");
 			
 		} else
 		{
@@ -125,10 +127,10 @@ public class BookJsonListAction implements Action {
 				String book_img = (String)imsi.get("cover_s_url");
 				String book_sale_price = (String)imsi.get("sale_price");
 				String book_description = (String)imsi.get("description");
-				String book_pub_date = (String)imsi.get("pub_date");
+				String book_pub_date_string = (String)imsi.get("pub_date");
 			
 				//BookDTO bookDto = new BookDTO(book_author, book_img, book_sale_price, book_description);
-				BookDTO bookDto = new BookDTO(book_isbn, book_title, book_author, book_img, book_sale_price, book_description, book_pub_date);
+				BookDTO bookDto = new BookDTO(book_isbn, book_title, book_author, book_img, book_sale_price, book_description, book_pub_date_string);
 				
 				bookList.add(bookDto);
 					
