@@ -15,9 +15,13 @@
 <table border="1" width="600">
 
 	<tr>
-		<th>표지</th>
+		<th>isbn</th>
 
 		<th>제목</th>
+
+		<th>이미지</th>
+		
+		<th>저자</th>
 
 		<th>가격</th>
 
@@ -29,6 +33,10 @@
 	<c:forEach var="vo" items="${requestScope.resultBook}" >
 	
 		<tr>
+			<td>${vo.book_isbn }</td>
+			
+			<td>${vo.book_title }</td>
+		
 			<td><img src="${vo.book_img }" width=50 height=50 /></td>
 	
 			<td width=30>${vo.book_author }</td>
