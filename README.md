@@ -1,7 +1,10 @@
 #JSON on from Java application to Spring web... : basic ^ ^  
-##I studied this from this Document : [PaJamasi Java | 01.JSON이란?... ](http://blog.naver.com/pajamasi/220554189537 "Example Sources by tudoistube@gmail" )  
-##Reference Document : Self Summary on [JavaJson](https://drive.google.com/open?id=16_7Pk9byKYa-obxdjzqzB94vvY7h4MvIGGptoOxPnBI "summarized by tudoistube@gmail" )  
+##Reference Document : Self Summary on [JavaWebJson](https://drive.google.com/open?id=16_7Pk9byKYa-obxdjzqzB94vvY7h4MvIGGptoOxPnBI "summarized by tudoistube@gmail" )  
 
+###zjson_jsp : warming up...  
+* I studied this from this Document : [PaJamasi Java | 01.JSON이란?... ](http://blog.naver.com/pajamasi/220554189537 "Example Sources by tudoistube@gmail" )  
+
+###zjson_jspCh14_1_Model1_01 : applying JSON to Servlet&JSP...  
     
 책 보면서 실습한 소스임.  
 공부하면서 올리는 것이어서 틀린 부분이 있을수도 있음(알려주시면 반영하겠음)  

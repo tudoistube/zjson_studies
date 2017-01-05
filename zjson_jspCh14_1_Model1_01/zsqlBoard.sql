@@ -18,3 +18,18 @@ create table zjsp_board(
 select * from ZJSP_BOARD;
 
 drop table zjsp_board;
+
+
+//drop table zjson_book;
+create table zjson_book(
+    book_num number,
+	book_isbn varchar2(120),
+	book_title varchar2(120),
+	book_author varchar2(20),
+	book_img varchar2(2000),
+	book_sale_price number,
+	book_description varchar2(2000),
+	primary key(book_num)
+);
+
+select * from zjson_book;

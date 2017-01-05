@@ -119,16 +119,20 @@ public class BookJsonListAction implements Action {
 			{
 				JSONObject imsi = (JSONObject) item.get(i);
 				
+				String book_isbn = (String)imsi.get("isbn");
+				String book_title = (String)imsi.get("title");
 				String book_author = (String)imsi.get("author_t");
 				String book_img = (String)imsi.get("cover_s_url");
 				String book_sale_price = (String)imsi.get("sale_price");
 				String book_description = (String)imsi.get("description");
+				String book_pub_date = (String)imsi.get("pub_date");
 			
-				BookDTO bookDto = new BookDTO(book_author, book_img, book_sale_price, book_description);
+				//BookDTO bookDto = new BookDTO(book_author, book_img, book_sale_price, book_description);
+				BookDTO bookDto = new BookDTO(book_isbn, book_title, book_author, book_img, book_sale_price, book_description, book_pub_date);
 				
 				bookList.add(bookDto);
 					
 			}//...E.for(int i=0; i<item.size(); i++)
 			
-		}	 
+	}	 
 }
