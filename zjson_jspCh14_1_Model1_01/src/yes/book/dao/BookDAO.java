@@ -182,6 +182,10 @@ public class BookDAO {
 			pstmt.setString(6, bookDto.getBook_sale_price());
 			pstmt.setString(7, bookDto.getBook_description());
 			
+			/*
+			 * ...Using setDate in PreparedStatement
+			 *    http://stackoverflow.com/questions/18614836/using-setdate-in-preparedstatement
+			 */
 			SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMdd");
 			try {
 

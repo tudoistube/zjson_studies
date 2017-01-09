@@ -4,11 +4,11 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>BookSearchGET.yes</title>
 </head>
 <body>
 
-	<form method="post" action="BookListJsonPOST.yes">
+	<form method="POST" action="BookListJsonPOST.yes">
 		 책이름 : <input type="text" name="bookName"/><br/>
 		 <input type="submit" value="검색"/>
 		 <input type="reset" value="취소"/>

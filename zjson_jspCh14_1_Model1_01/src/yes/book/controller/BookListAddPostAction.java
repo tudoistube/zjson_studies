@@ -42,7 +42,8 @@ public class BookListAddPostAction implements Action {
 		ArrayList<BookDTO> list = new ArrayList<BookDTO>();
 		
 		//...파싱해서 책 저장하기.
-		parsingJsonAndSave(list, json);
+		//parsingJsonAndSave(list, json); //...방법1.
+		JSONArray jsonArr = parsingJsonAndSave(list, json); //...방법2.
 		
 		ActionForward zaction = new ActionForward();
 		
@@ -54,7 +55,8 @@ public class BookListAddPostAction implements Action {
 			//session.setAttribute("session_list",list);
 
 			//...검색결과를 Request 영역에 담기.
-			request.setAttribute("resultBook", list);
+			//request.setAttribute("resultBook", list); //...방법1.
+			request.setAttribute("resultBook", jsonArr); //...방법2.
 			String zresult = "saved into local Db.";
 			request.setAttribute("zresult", zresult);
 
@@ -110,7 +112,7 @@ public class BookListAddPostAction implements Action {
 		return zaction;	
 	 }
 	 
-	 private void parsingJsonAndSave(ArrayList<BookDTO> bookList, String json) throws ParseException {
+	 private JSONArray parsingJsonAndSave(ArrayList<BookDTO> bookList, String json) throws ParseException {
 			
 			JSONParser parser = new JSONParser();
 			JSONObject obj = (JSONObject)parser.parse(json);
@@ -147,6 +149,8 @@ public class BookListAddPostAction implements Action {
 		   		}
 					
 			}//...E.for(int i=0; i<item.size(); i++)
+			
+			return item;
 			
 	}	 
 }

@@ -127,7 +127,7 @@ import net.board.action.ActionForward;
 				e.printStackTrace();
 			}
 			
-		}else if(command.equals("/BookSearchGET.yes")){
+		}else if(command.equals("/BookSearchInputGET.yes")){
 			forward=new ActionForward();
 			forward.setRedirect(false);
 			forward.setPath("./book_json/bookSearchInput.jsp");
