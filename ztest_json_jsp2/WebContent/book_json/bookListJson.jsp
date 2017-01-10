@@ -5,6 +5,9 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<script src="https://code.jquery.com/jquery-3.1.1.js"
+		    integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+		    crossorigin="anonymous"></script>
 	<title>Book List from Daum Open API with JSON...</title>
 	<script type="text/javascript">
 		function addBook(){
@@ -19,19 +22,40 @@
 		var zjsonArr = '<%= request.getAttribute("zjsonArr") %>';    /* retrieve json from request attribute */
 		//var mytest = eval('(' + myVar + ')');
 		//var jsonObj = JSON.parse(jsonArr);
-		console.log("zjson : " + zjson);
-		console.log("zjsonArr : " + zjsonArr);
+		//console.log("zjson : " + zjson); 
+		//console.log("zjsonArr : " + zjsonArr);
 		
-		alert("zjsonArr.arr[0]" + zjson.channel[0].author);
-		alert("zjsonArr.arr[0]" + zjsonArr[0].author);
-		//alert("2 : " + jsonObj);       
+		var zjsonParse = JSON.parse(zjson);
+		var zjsonArrParse = JSON.parse(zjsonArr);
+
+		console.log("zjsonParse : " + zjsonParse); //zjsonParse : [object Object]
+		console.log("zjsonArrParse : " + zjsonArrParse); //zjsonArrParse : [object Object],[object Object],[object Object]
+		console.log("------------------------");		
+		console.log("zjsonParse : " + zjsonParse.channel.item[0].author);
+		console.log("zjsonArrParse : " + zjsonArrParse[0].author);		
+		console.log("------------------------");
+		
+        for (var i in zjsonArrParse) {
+        	console.log();
+            console.log(zjsonArrParse[i].author);
+            console.log();
+        }//for.		
+		
+        /*
+		var zjsonStringify = JSON.stringify(zjson);
+		var zjsonArrStringify = JSON.stringify(zjsonArr);
+
+		console.log("zjsonStringify : " + zjsonStringify); 
+		console.log("zjsonArrStringify : " + zjsonArrStringify);		
+		console.log("------------------------");
+		*/
+		   
 	</script>
 </head>
 <body>
 
 
 <h1>JSON 으로 출력하기...</h1>
-
 
 
 <c:if test="${not empty requestScope.zresult }">

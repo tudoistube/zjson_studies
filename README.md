@@ -5,6 +5,9 @@
 * I studied this from this Document : [PaJamasi Java | 01.JSON이란?... ](http://blog.naver.com/pajamasi/220554189537 "Example Sources by tudoistube@gmail" )  
 
 ###zjson_jspCh14_1_Model1_01 : applying JSON to Servlet&JSP...  
+
+###ztest_json_jsp : struggling to find a way to use JSON on Servlet&JSP synchronously for applying React.js at front-end...  
+
     
 책 보면서 실습한 소스임.  
 공부하면서 올리는 것이어서 틀린 부분이 있을수도 있음(알려주시면 반영하겠음)  
