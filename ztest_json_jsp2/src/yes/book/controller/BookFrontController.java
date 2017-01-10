@@ -49,25 +49,25 @@ import yes.book.action.ActionForward;
 		  */
 		 Action action=null;
 		
-		if(command.equals("/BookListAddPost.yes")){
-			action = new BookListAddPostAction();
-			try{
-				forward=action.execute(request, response);
-			}catch(Exception e){
-				e.printStackTrace();
-			}
-		}else if(command.equals("/BookListJsonPOST.yes")){
+		if(command.equals("/BookListJsonPost.yes")){
 			action = new BookListJsonPostAction();
 			try{
 				forward=action.execute(request, response);
 			}catch(Exception e){
 				e.printStackTrace();
 			}
+		}else if(command.equals("/BookListPOST.yes")){
+			action = new BookListPostAction();
+			try{
+				forward=action.execute(request, response);
+			}catch(Exception e){
+				e.printStackTrace();
+			}
 			
-		}else if(command.equals("/BookSearchInputGET.yes")){
+		}else if(command.equals("/BookInputGET.yes")){
 			forward=new ActionForward();
 			forward.setRedirect(false);
-			forward.setPath("./book_json/bookSearchInput.jsp");
+			forward.setPath("./book_json/bookInput.jsp");
 		}
 		
 		if(forward != null){

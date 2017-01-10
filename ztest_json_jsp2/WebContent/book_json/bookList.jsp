@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Book List from Daum Open API...</title>
+<title>Book List from Daum Open API with JSP...</title>
 	<script type="text/javascript">
 		function addBook(){
 			frmBook.submit();
@@ -13,6 +13,8 @@
 	</script>
 </head>
 <body>
+
+<h1>JSP 로 출력하기...</h1>
 
 <table border="1" width="600">
 
@@ -55,7 +57,7 @@
 
 </c:if>
 
-<form action="./BookListAddPost.yes" method="post" name="frmBook">
+<form action="./BookListJsonPost.yes" method="post" name="frmBook">
 	<input type="hidden" name="bookName" value=${requestScope.bookName}>	
 	<a href="javascript:addBook()">[현재 목록 로컬 DB 에 저장하기]</a>
 </form>
