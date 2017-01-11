@@ -202,9 +202,16 @@ public class BookDAO {
 			
 			
 			result=pstmt.executeUpdate();
-			if(result==0)return false;
+			if(result==0){
+				System.out.println("bookDtoInsert failed and will rollback...");
+				con.rollback();
+				return false;
+			}else{
+				System.out.println("bookDtoInsert succeeded and will commit...");
+				con.commit();				
+				return true;
+			}
 			
-			return true;
 		}catch(Exception ex){
 			System.out.println("bookDtoInsert 에러 : "+ex);
 		}finally{

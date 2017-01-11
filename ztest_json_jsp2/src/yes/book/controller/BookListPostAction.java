@@ -39,7 +39,7 @@ public class BookListPostAction implements Action {
 		ArrayList<BookDTO> list = new ArrayList<BookDTO>();
 		
 		//...파싱해서 책 담기.
-		parsingJson(list, json);
+		list = parsingJson(json);
 		
 		ActionForward zaction = new ActionForward();
 		
@@ -70,8 +70,10 @@ public class BookListPostAction implements Action {
 		return zaction;	
 	 }
 	 
-	 private void parsingJson(ArrayList<BookDTO> bookList, String json) throws ParseException {
+	 private ArrayList<BookDTO> parsingJson(String json) throws ParseException {
 			
+		   ArrayList<BookDTO> bookList = new ArrayList<BookDTO>();
+		 
 			JSONParser parser = new JSONParser();
 			JSONObject obj = (JSONObject)parser.parse(json);
 			
@@ -100,6 +102,8 @@ public class BookListPostAction implements Action {
 				bookList.add(bookDto);
 					
 			}//...E.for(int i=0; i<item.size(); i++)
+			
+			return bookList;
 			
 	}	 
 }

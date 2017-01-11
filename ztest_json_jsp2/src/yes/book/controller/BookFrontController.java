@@ -49,14 +49,26 @@ import yes.book.action.ActionForward;
 		  */
 		 Action action=null;
 		
-		if(command.equals("/BookListJsonPost.yes")){
-			action = new BookListJsonPostAction();
+		if(command.equals("/BookListJsonSavePost.yes")){ //...OK.
+			action = new BookListJsonSavePostAction();
 			try{
 				forward=action.execute(request, response);
 			}catch(Exception e){
 				e.printStackTrace();
 			}
-		}else if(command.equals("/BookListPOST.yes")){
+		}/*
+		else if(command.equals("/BoardReplyAction.bo")){
+			action = new BoardReplyAction();
+			try{
+				/*
+				 * ...command 에 해당하는 Action 객체를 실행하여 비즈니스 로직을 실행한 후
+				 * ...(비즈니스 로직은 execute 메서드를 호출해서 실행하고 있다) 리턴 값으로 각각의 ActionForward 객체를 반환함.
+				 *_/
+				forward=action.execute(request, response);
+			}catch(Exception e){
+				e.printStackTrace();
+			}
+		}*/else if(command.equals("/BookListPOST.yes")){ //...OK.
 			action = new BookListPostAction();
 			try{
 				forward=action.execute(request, response);
@@ -64,7 +76,7 @@ import yes.book.action.ActionForward;
 				e.printStackTrace();
 			}
 			
-		}else if(command.equals("/BookInputGET.yes")){
+		}else if(command.equals("/BookInputGET.yes")){ //...OK.
 			forward=new ActionForward();
 			forward.setRedirect(false);
 			forward.setPath("./book_json/bookInput.jsp");

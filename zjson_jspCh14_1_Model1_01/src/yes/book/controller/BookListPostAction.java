@@ -10,12 +10,12 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
-import net.board.action.Action;
-import net.board.action.ActionForward;
+import yes.book.action.Action;
+import yes.book.action.ActionForward;
 import yes.book.dto.BookDTO;
 import zjson.util.HttpClientGet;
 
-public class BookListJsonPostAction implements Action {
+public class BookListPostAction implements Action {
 	 
 	 public ActionForward execute(HttpServletRequest request,HttpServletResponse response) throws Exception{
 		 
@@ -27,7 +27,7 @@ public class BookListJsonPostAction implements Action {
 		 
 		// 요청할 주소를 넣으세요
 		//String url = "https://apis.daum.net/search/book?apikey=3250431f017bec03f26cc7781dfca95b&q=CSS&output=json";
-		String url = "https://apis.daum.net/search/book?apikey="+key+"&q="+bookName+"&output=json";
+		String url = "https://apis.daum.net/search/book?apikey="+key+"&q="+bookName+"&result=3&output=json";
 		
 		// 다음 서버로 부터 json 받아오기 
 		String json = HttpClientGet.get_JSONDATA(url);	
@@ -39,7 +39,7 @@ public class BookListJsonPostAction implements Action {
 		ArrayList<BookDTO> list = new ArrayList<BookDTO>();
 		
 		//...파싱해서 책 담기.
-		parsingJson(list, json);
+		list = parsingJson(json);
 		
 		ActionForward zaction = new ActionForward();
 		
@@ -56,7 +56,7 @@ public class BookListJsonPostAction implements Action {
 			//...Dispatcher 설정.
 			zaction.setRedirect(false);
 			//...이동할 페이지.
-			zaction.setPath("./book_json/bookListJson.jsp");
+			zaction.setPath("./book_json/bookList.jsp");
 			
 		} else
 		{
@@ -65,48 +65,15 @@ public class BookListJsonPostAction implements Action {
 			zaction.setRedirect(false);
 			zaction.setPath("Error.jsp");
 		}	
-		
-//---------------------------------------------------------------------------------
-		/*
-		BoardDAO boarddao=new BoardDAO();
-		List boardlist=new ArrayList();
-		
-		int page=1;
-		int limit=10;
-		
-		if(request.getParameter("page")!=null){
-			page=Integer.parseInt(request.getParameter("page"));
-		}
-		
-		int listcount=boarddao.getListCount(); //총 리스트 수를 받아옴
-		boardlist = boarddao.getBoardList(page,limit); //리스트를 받아옴
-		
-		//총 페이지 수
-		int maxpage=(int)((double)listcount/limit+0.95); //0.95를 더해서 올림 처리
-		//현재 페이지에 보여줄 시작 페이지 수(1, 11, 21 등...)
-		int startpage = (((int) ((double)page / 10 + 0.9)) - 1) * 10 + 1;
-		//현재 페이지에 보여줄 마지막 페이지 수(10, 20, 30 등...)
-		int endpage = startpage+10-1;
+	
 
-		if (endpage> maxpage) endpage= maxpage;
-
-		
-		request.setAttribute("page", page); //현재 페이지 수
-		request.setAttribute("maxpage", maxpage); //최대 페이지 수
-		request.setAttribute("startpage", startpage); //현재 페이지에 표시할 첫 페이지 수
-		request.setAttribute("endpage", endpage); //현재 페이지에 표시할 끝 페이지 수
-		request.setAttribute("listcount",listcount); //글 수
-		request.setAttribute("boardlist", boardlist);
-		
-		ActionForward forward= new ActionForward();
-	 	forward.setRedirect(false);
-		forward.setPath("./board/qna_board_list.jsp");
-		*/
 		return zaction;	
 	 }
 	 
-	 private void parsingJson(ArrayList<BookDTO> bookList, String json) throws ParseException {
+	 private ArrayList<BookDTO> parsingJson(String json) throws ParseException {
 			
+		   ArrayList<BookDTO> bookList = new ArrayList<BookDTO>();
+		 
 			JSONParser parser = new JSONParser();
 			JSONObject obj = (JSONObject)parser.parse(json);
 			
@@ -135,6 +102,8 @@ public class BookListJsonPostAction implements Action {
 				bookList.add(bookDto);
 					
 			}//...E.for(int i=0; i<item.size(); i++)
+			
+			return bookList;
 			
 	}	 
 }

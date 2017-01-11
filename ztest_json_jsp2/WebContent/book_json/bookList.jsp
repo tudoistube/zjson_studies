@@ -51,13 +51,13 @@
 	
 			<td>${vo.book_description }</td>
 	
-			<td>${vo.book_pub_date }</td>
+			<td>${vo.book_pub_date_string }</td>
 	
 	</c:forEach>
 
 </c:if>
 
-<form action="./BookListJsonPost.yes" method="post" name="frmBook">
+<form action="./BookListJsonSavePost.yes" method="post" name="frmBook">
 	<input type="hidden" name="bookName" value=${requestScope.bookName}>	
 	<a href="javascript:addBook()">[현재 목록 로컬 DB 에 저장하기]</a>
 </form>

@@ -5,9 +5,16 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>Book List from Daum Open API with JSP...</title>
+	<script type="text/javascript">
+		function addBook(){
+			frmBook.submit();
+		}
+	</script>
 </head>
 <body>
+
+<h1>JSP 로 출력하기...</h1>
 
 <table border="1" width="600">
 
@@ -44,10 +51,19 @@
 	
 			<td>${vo.book_description }</td>
 	
-			<td>${vo.book_pub_date }</td>
+			<td>${vo.book_pub_date_string }</td>
 	
 	</c:forEach>
 
+</c:if>
+
+<form action="./BookListJsonSavePost.yes" method="post" name="frmBook">
+	<input type="hidden" name="bookName" value=${requestScope.bookName}>	
+	<a href="javascript:addBook()">[현재 목록 로컬 DB 에 저장하기]</a>
+</form>
+
+<c:if test="${not empty requestScope.zresult }">
+	${zresult }
 </c:if>
 
 
