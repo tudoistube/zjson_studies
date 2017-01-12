@@ -70,7 +70,9 @@
 	
 	
 	//...방법2.
-	/*...E.by12p.*/
+	
+	/*...javaJson_step09
+	*/
 	
 	// Parent Component
 	var HiWorld = function (_React$Component) {
@@ -107,7 +109,7 @@
 	          _react2.default.createElement(
 	            ListItem,
 	            { quantity: '30' },
-	            'Eggs'
+	            'Eggs : 0 EA.'
 	          ),
 	          _react2.default.createElement(
 	            ListItem,

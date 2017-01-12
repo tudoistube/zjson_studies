@@ -16,7 +16,7 @@ import yes.book.dao.BookDAO;
 import yes.book.dto.BookDTO;
 import zjson.util.HttpClientGet;
 
-public class BookReactIndexGetAction implements Action {
+public class ReactIndexGetAction implements Action {
 	
 	BookDAO bookDao = new BookDAO();	
 	 

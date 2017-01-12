@@ -4,7 +4,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>1st React Component in Springframework3.</title>
+    <title>1st React Component in Servlet&JSP.</title>
   </head>
 
   <body>

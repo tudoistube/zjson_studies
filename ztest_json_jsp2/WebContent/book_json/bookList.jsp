@@ -57,10 +57,13 @@
 
 </c:if>
 
+
 <form action="./BookListJsonSavePost.yes" method="post" name="frmBook">
 	<input type="hidden" name="bookName" value=${requestScope.bookName}>	
 	<a href="javascript:addBook()">[현재 목록 로컬 DB 에 저장하기]</a>
 </form>
+
+<br/><br/>
 
 <c:if test="${not empty requestScope.zresult }">
 	${zresult }

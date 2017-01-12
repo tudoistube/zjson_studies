@@ -3,6 +3,13 @@ import React from 'react';
 import ReactDOM from 'react-dom'; //...방법2.
 
 /*...javaJson_step09
+     /ReactIndexGET.yes
+     ↓
+     /ztest_json_jsp2/src/yes/book/controller/BookFrontController.java
+     ↓
+     /ztest_json_jsp2/src/yes/book/controller/BookReactIndexGetAction.java
+     ↓
+     /ztest_json_jsp2/WebContent/book_react/index.jsp
 */
 
 // Parent Component

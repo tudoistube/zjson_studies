@@ -49,15 +49,28 @@ import yes.book.action.ActionForward;
 		  */
 		 Action action=null;
 		
-		 if(command.equals("/ReactIndexGET.yes")){ //...OK.
-				action = new BookReactIndexGetAction();
+		 if(command.equals("/ReactListJsonGET.yes")){ 
+				action = new ReactListJsonGetAction();
 				try{
 					forward=action.execute(request, response);
 				}catch(Exception e){
 					e.printStackTrace();
 				}
 				
-		}else if(command.equals("/BookListJsonSavePost.yes")){ //...OK.
+		}else if(command.equals("/ReactInputGET.yes")){
+			forward=new ActionForward();
+			forward.setRedirect(false);
+			forward.setPath("./book_react/bookInput.jsp");
+			
+		}else if(command.equals("/ReactIndexGET.yes")){
+				action = new ReactIndexGetAction();
+				try{
+					forward=action.execute(request, response);
+				}catch(Exception e){
+					e.printStackTrace();
+				}
+				
+		}else if(command.equals("/BookListJsonSavePost.yes")){
 			action = new BookListJsonSavePostAction();
 			try{
 				forward=action.execute(request, response);
@@ -76,7 +89,7 @@ import yes.book.action.ActionForward;
 			}catch(Exception e){
 				e.printStackTrace();
 			}
-		}*/else if(command.equals("/BookListPOST.yes")){ //...OK.
+		}*/else if(command.equals("/BookListPOST.yes")){
 			action = new BookListPostAction();
 			try{
 				forward=action.execute(request, response);
@@ -84,7 +97,7 @@ import yes.book.action.ActionForward;
 				e.printStackTrace();
 			}
 			
-		}else if(command.equals("/BookInputGET.yes")){ //...OK.
+		}else if(command.equals("/BookInputGET.yes")){
 			forward=new ActionForward();
 			forward.setRedirect(false);
 			forward.setPath("./book_json/bookInput.jsp");
