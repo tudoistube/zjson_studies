@@ -49,7 +49,15 @@ import yes.book.action.ActionForward;
 		  */
 		 Action action=null;
 		
-		if(command.equals("/BookListJsonSavePost.yes")){ //...OK.
+		 if(command.equals("/ReactIndexGET.yes")){ //...OK.
+				action = new BookReactIndexGetAction();
+				try{
+					forward=action.execute(request, response);
+				}catch(Exception e){
+					e.printStackTrace();
+				}
+				
+		}else if(command.equals("/BookListJsonSavePost.yes")){ //...OK.
 			action = new BookListJsonSavePostAction();
 			try{
 				forward=action.execute(request, response);

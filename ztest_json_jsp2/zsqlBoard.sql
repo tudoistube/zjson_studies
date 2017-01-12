@@ -33,6 +33,6 @@ create table zjson_book(
 	primary key(book_num)
 );
 
-select * from zjson_book;
+select * from zjson_book order by book_num;
 select book_title, book_date from zjson_book;
 delete from zjson_book;
