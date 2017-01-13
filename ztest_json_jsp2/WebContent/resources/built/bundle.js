@@ -135,6 +135,11 @@
 	      return _react2.default.createElement(
 	        'div',
 	        { className: 'list' },
+	        _react2.default.createElement(
+	          'h3',
+	          null,
+	          '== Book List =='
+	        ),
 	        books
 	      );
 	    }
@@ -165,19 +170,25 @@
 	          { className: 'book' },
 	          _react2.default.createElement(
 	            'div',
+	            { className: 'book__title' },
+	            'Title : ',
+	            this.props.title
+	          ),
+	          _react2.default.createElement(
+	            'div',
 	            { className: 'book__author' },
+	            'Author : ',
 	            this.props.author
 	          ),
 	          _react2.default.createElement(
 	            'div',
 	            { className: 'book__isbn' },
+	            'ISBN : ',
 	            this.props.isbn
 	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'book__title' },
-	            this.props.title
-	          )
+	          _react2.default.createElement('br', null),
+	          _react2.default.createElement('br', null),
+	          _react2.default.createElement('br', null)
 	        )
 	      );
 	    }

@@ -37,6 +37,7 @@ class List extends React.Component {
 
     return (
       <div className="list">
+        <h3>== Book List ==</h3>
         {books}
       </div>
     );
@@ -50,9 +51,10 @@ class Book extends React.Component {
 	      /*...Card 컴포넌트에 className 특성이 사용된 것에 주의할 것.
 	      JSX는 자바스크립트이므로 class 같은 XML 특성이 있는 식별자와 구분하기 위함.*/
 	      <div className="book">
-	        <div className="book__author">{this.props.author}</div>
-	        <div className="book__isbn">{this.props.isbn}</div>
-	        <div className="book__title">{this.props.title}</div>
+	      	<div className="book__title">Title : {this.props.title}</div>
+	        <div className="book__author">Author : {this.props.author}</div>
+	        <div className="book__isbn">ISBN : {this.props.isbn}</div>
+	        <br/><br/><br/>
 	      </div>
 	    );
 	  }
