@@ -18,7 +18,7 @@ class HiWorld extends React.Component { //...by12p.ref434p.
     return (
       <div>
         <ul>
-          <List books={this.props.zjsonArr} />
+          <List books={this.props.zjsonArrParse} />
   	     </ul>
       </div>
     );
@@ -29,7 +29,8 @@ class HiWorld extends React.Component { //...by12p.ref434p.
 class List extends React.Component {
   render() {
     var books = this.props.books.map((book) => {
-      return <Book author={book.author}
+      return <Book key={book.title}
+                   author={book.author}
                    title={book.title}
                    isbn={book.isbn} />
     });
@@ -59,4 +60,4 @@ class Book extends React.Component {
 
 
 //render(<HiWorld />, document.getElementById('zroot')); //...방법1.
-ReactDOM.render(<HiWorld zjsonArr={zjsonArr}/>, document.getElementById('zroot')); //...방법2.
+ReactDOM.render(<HiWorld zjsonArrParse={zjsonArrParse}/>, document.getElementById('zroot')); //...방법2.
