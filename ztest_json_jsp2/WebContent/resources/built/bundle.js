@@ -95,27 +95,7 @@
 	        _react2.default.createElement(
 	          'ul',
 	          null,
-	          _react2.default.createElement(
-	            'h1',
-	            null,
-	            '^^Hi, ',
-	            this.props.zmessage
-	          ),
-	          _react2.default.createElement(
-	            ListItem,
-	            { quantity: '6' },
-	            'Bread'
-	          ),
-	          _react2.default.createElement(
-	            ListItem,
-	            { quantity: '30' },
-	            'Eggs : 0 EA.'
-	          ),
-	          _react2.default.createElement(
-	            ListItem,
-	            { quantity: '2' },
-	            'Milk'
-	          )
+	          _react2.default.createElement(List, { books: this.props.zjsonArr })
 	        )
 	      );
 	    }
@@ -127,35 +107,82 @@
 	// Child Component
 	
 	
-	var ListItem = function (_React$Component2) {
-	  _inherits(ListItem, _React$Component2);
+	var List = function (_React$Component2) {
+	  _inherits(List, _React$Component2);
 	
-	  function ListItem() {
-	    _classCallCheck(this, ListItem);
+	  function List() {
+	    _classCallCheck(this, List);
 	
-	    return _possibleConstructorReturn(this, (ListItem.__proto__ || Object.getPrototypeOf(ListItem)).apply(this, arguments));
+	    return _possibleConstructorReturn(this, (List.__proto__ || Object.getPrototypeOf(List)).apply(this, arguments));
 	  }
 	
-	  _createClass(ListItem, [{
+	  _createClass(List, [{
 	    key: 'render',
 	    value: function render() {
+	      var books = this.props.books.map(function (book) {
+	        return _react2.default.createElement(Book, { author: book.author,
+	          title: book.title,
+	          isbn: book.isbn });
+	      });
+	
 	      return _react2.default.createElement(
-	        'li',
-	        null,
-	        this.props.quantity,
-	        ' \xD7 ',
-	        this.props.children
+	        'div',
+	        { className: 'list' },
+	        books
 	      );
 	    }
 	  }]);
 	
-	  return ListItem;
+	  return List;
+	}(_react2.default.Component);
+	
+	;
+	
+	var Book = function (_React$Component3) {
+	  _inherits(Book, _React$Component3);
+	
+	  function Book() {
+	    _classCallCheck(this, Book);
+	
+	    return _possibleConstructorReturn(this, (Book.__proto__ || Object.getPrototypeOf(Book)).apply(this, arguments));
+	  }
+	
+	  _createClass(Book, [{
+	    key: 'render',
+	    value: function render() {
+	      return (
+	        /*...Card 컴포넌트에 className 특성이 사용된 것에 주의할 것.
+	        JSX는 자바스크립트이므로 class 같은 XML 특성이 있는 식별자와 구분하기 위함.*/
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'book' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'book__author' },
+	            this.props.author
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'book__isbn' },
+	            this.props.isbn
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'book__title' },
+	            this.props.title
+	          )
+	        )
+	      );
+	    }
+	  }]);
+	
+	  return Book;
 	}(_react2.default.Component);
 	
 	//render(<HiWorld />, document.getElementById('zroot')); //...방법1.
 	
 	
-	_reactDom2.default.render(_react2.default.createElement(HiWorld, { zmessage: zmessage }), document.getElementById('zroot')); //...방법2.
+	_reactDom2.default.render(_react2.default.createElement(HiWorld, { zjsonArr: zjsonArr }), document.getElementById('zroot')); //...방법2.
 
 /***/ },
 /* 1 */

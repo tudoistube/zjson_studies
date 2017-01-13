@@ -3,7 +3,8 @@ var path = require('path');
 var node_dir = __dirname + '/node_modules';
 
 module.exports = {
-    entry:  __dirname + '/WebContent/resources/reactjs/App.js',
+    //entry:  __dirname + '/WebContent/resources/reactjs/App_step09.js',
+	entry:  __dirname + '/WebContent/resources/reactjs/App.js',
     devtool: 'sourcemaps',
     cache: true,
     debug: true,

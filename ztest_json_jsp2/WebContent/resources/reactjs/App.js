@@ -12,10 +12,7 @@ class HiWorld extends React.Component { //...by12p.ref434p.
     return (
       <div>
         <ul>
-          <h1>^^Hi, {this.props.zmessage}</h1>
-          <ListItem quantity="6">Bread</ListItem>
-          <ListItem quantity="30">Eggs : 0 EA.</ListItem>
-          <ListItem quantity="2">Milk</ListItem>
+          <List books={this.props.zjsonArr} />
   	     </ul>
       </div>
     );
@@ -23,17 +20,37 @@ class HiWorld extends React.Component { //...by12p.ref434p.
 }
 
 // Child Component
-class ListItem extends React.Component {
+class List extends React.Component {
   render() {
+    var books = this.props.books.map((book) => {
+      return <Book author={book.author}
+                   title={book.title}
+                   isbn={book.isbn} />
+    });
+
     return (
-      <li>
-        {/*...props.childern 속성을 이용해 열기 태그와 닫기 태그 사이에
-              내용을 참조할 수 있음(Bread, Eggs, Milk 등이 출력됨).*/}
-        {this.props.quantity} × {this.props.children}
-      </li>
+      <div className="list">
+        {books}
+      </div>
     );
   }
-}
+};
+
+class Book extends React.Component {
+
+	  render() {
+	    return (
+	      /*...Card 컴포넌트에 className 특성이 사용된 것에 주의할 것.
+	      JSX는 자바스크립트이므로 class 같은 XML 특성이 있는 식별자와 구분하기 위함.*/
+	      <div className="book">
+	        <div className="book__author">{this.props.author}</div>
+	        <div className="book__isbn">{this.props.isbn}</div>
+	        <div className="book__title">{this.props.title}</div>
+	      </div>
+	    );
+	  }
+	}
+
 
 //render(<HiWorld />, document.getElementById('zroot')); //...방법1.
-ReactDOM.render(<HiWorld zmessage={zmessage}/>, document.getElementById('zroot')); //...방법2.
+ReactDOM.render(<HiWorld zjsonArr={zjsonArr}/>, document.getElementById('zroot')); //...방법2.
