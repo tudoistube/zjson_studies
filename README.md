@@ -1,19 +1,19 @@
 #JSON on from Java application to Spring web... : master ^ ^  
 
+
 #List of Branches  
 
-#[JSON Java App Self Summary](https://drive.google.com/open?id=1YeaNRvtddIXNG9K120ucD65vj9vQ8qLUpvpO8PN1RDk "Example Sources practised by tudoistube@gmail" )  
-##java_app : basic usage of json in java application.  
+##java_app : basic usage of json in java application, sheet name : JavaJson.  
 *I studied this from this Document : [PaJamasi Java | 01.JSON이란?... ](http://blog.naver.com/pajamasi/220554189537 "summarized by tudoistube@gmail" )  
+##Reference Document : Self Summary on [JSON Jsp Web Self Summary, Shared_ZSpringReact](https://docs.google.com/spreadsheets/d/16_7Pk9byKYa-obxdjzqzB94vvY7h4MvIGGptoOxPnBI/edit#gid=989485646 "Example Sources practised by tudoistube@gmail" )  
 
-#[JSON Jsp Web Self Summary](https://docs.google.com/spreadsheets/d/16_7Pk9byKYa-obxdjzqzB94vvY7h4MvIGGptoOxPnBI/edit#gid=989485646 "Example Sources practised by tudoistube@gmail" )  
-##jsp_web : basic usage of json in jsp web dynamic project.  
+##jsp_web : basic usage of json in jsp web dynamic project, sheet name : JspReact.  
 *I studied this from this Document : [PaJamasi Java | JSP 프로젝트에서 DAUM API 연동하여... ](http://blog.naver.com/pajamasi/220556608962 "summarized by tudoistube@gmail" )  
+##Reference Document : Self Summary on [JSON Jsp Web Self Summary, Shared_ZSpringReact](https://docs.google.com/spreadsheets/d/16_7Pk9byKYa-obxdjzqzB94vvY7h4MvIGGptoOxPnBI/edit#gid=989485646 "Example Sources practised by tudoistube@gmail" )  
 
 ##jsp_web_00 : recipe to be cooked with json in jsp web dynamic project.  
 
-##Reference Document : Self Summary on [JavaJson](https://drive.google.com/open?id=16_7Pk9byKYa-obxdjzqzB94vvY7h4MvIGGptoOxPnBI "summarized by tudoistube@gmail" )  
-
+##Reference Document : Self Summary on [JSON Java App Self Summary, Shared_ZReact_Router](https://drive.google.com/open?id=1YeaNRvtddIXNG9K120ucD65vj9vQ8qLUpvpO8PN1RDk "Example Sources practised by tudoistube@gmail" )  
     
 책 보면서 실습한 소스임.  
 공부하면서 올리는 것이어서 틀린 부분이 있을수도 있음(알려주시면 반영하겠음)  
