@@ -3,13 +3,13 @@
 
 #List of Branches  
 
-#java_app : basic usage of json in java application, sheet name : JavaJson.  
-##Reference Document : Self Summary on [JSON Jsp Web Self Summary, Shared_ZSpringReact](https://docs.google.com/spreadsheets/d/16_7Pk9byKYa-obxdjzqzB94vvY7h4MvIGGptoOxPnBI/edit#gid=989485646 "Example Sources practised by tudoistube@gmail" )  
+#java_app : basic usage of json in java application.  
+##Reference Document : Self Summary on [JSON Jsp Web Self Summary, Shared_ZSpringReact :: JavaJson](https://docs.google.com/spreadsheets/d/16_7Pk9byKYa-obxdjzqzB94vvY7h4MvIGGptoOxPnBI/edit#gid=989485646 "Example Sources practised by tudoistube@gmail" )  
 *I studied this from this Document : [PaJamasi Java | 01.JSON이란?... ](http://blog.naver.com/pajamasi/220554189537 "summarized by tudoistube@gmail" )  
 
 
-#jsp_web : basic usage of json in jsp web dynamic project, sheet name : JspReact.  
-##Reference Document : Self Summary on [JSON Jsp Web Self Summary, Shared_ZSpringReact](https://docs.google.com/spreadsheets/d/16_7Pk9byKYa-obxdjzqzB94vvY7h4MvIGGptoOxPnBI/edit#gid=989485646 "Example Sources practised by tudoistube@gmail" )  
+#jsp_web : basic usage of json in jsp web dynamic project.  
+##Reference Document : Self Summary on [JSON Jsp Web Self Summary, Shared_ZSpringReact :: JspReact](https://docs.google.com/spreadsheets/d/16_7Pk9byKYa-obxdjzqzB94vvY7h4MvIGGptoOxPnBI/edit#gid=989485646 "Example Sources practised by tudoistube@gmail" )  
 *I studied this from this Document : [PaJamasi Java | JSP 프로젝트에서 DAUM API 연동하여... ](http://blog.naver.com/pajamasi/220556608962 "summarized by tudoistube@gmail" )  
 
 
