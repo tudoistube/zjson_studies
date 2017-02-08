@@ -10,13 +10,13 @@
 		    crossorigin="anonymous"></script>
 		    
     <!--...브라우저에서 이 jsp 페이지의 실행되는 주소가 
-           http://localhost:8080/ztest_json_jsp2/ReactListJsonGET.yes?bookName=CSS 이므로
-           /ztest_json_jsp2/WebContent 폴더를 http://localhost:8080/ztest_json_jsp2 와 같은 기준으로 잡고
+           http://localhost:8080/zjsp_json_react/ReactListJsonGET.yes?bookName=CSS 이므로
+           /zjsp_json_react/WebContent 폴더를 http://localhost:8080/zjsp_json_react 와 같은 기준으로 잡고
            하위의 CSS 파일이 든 폴더를 참조하기 위한 경로를 생각하면 절대경로이든 상대경로이든 설정하기 쉽다.  
-           절대경로 : <link rel="stylesheet" href="/ztest_json_jsp2/zcss/zstyles.css">
+           절대경로 : <link rel="stylesheet" href="/zjsp_json_react/zcss/zstyles.css">
            상대경로 : <link rel="stylesheet" href="./zcss/zstyles.css"> 
      -->
-	<link rel="stylesheet" href="/ztest_json_jsp2/zcss/zstyles.css">
+	<link rel="stylesheet" href="/zjsp_json_react/zcss/zstyles.css">
 			    
 	<title>Book List from Daum Open API with JSON...</title>
 	
@@ -90,7 +90,7 @@
 
 	<div id="zroot"></div>
 	
-    <script src="/ztest_json_jsp2/resources/built/bundle.js" type="text/javascript"></script>
+    <script src="/zjsp_json_react/resources/built/bundle.js" type="text/javascript"></script>
 
 </body>
 </html>

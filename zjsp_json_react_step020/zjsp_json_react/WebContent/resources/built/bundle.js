@@ -43,7 +43,7 @@
 /******/ ([
 /* 0 */
 /*!*************************************************!*\
-  !*** ./WebContent/resources/reactjs/App_010.js ***!
+  !*** ./WebContent/resources/reactjs/App_020.js ***!
   \*************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
@@ -71,18 +71,29 @@
 	
 	//...방법2.
 	
-	//...Simple Test to use React in JSP&Servlet...
-	var App_010 = function (_React$Component) {
-	  _inherits(App_010, _React$Component);
+	/*...javaJson_step11
+	 * 
+	var jsonArr = [
+		           {"author":"고경희","translator":"","isbn":"1187370681","link":"http:\/\/book.daum.net\/detail\/book.do?bookid=BOK00031821542YE","status_des":"정상판매","description":"웹 분야 1위 도서! HTML 5.1 최종 표준안으로 전면 개정! 대학, 학원 강의 인기 교재! 문과생도, 중학생도 쉽게 배우는 책! 웹 분야 1위 도서인 『Do it! HTML5+CSS3 웹 표준의 정석...","author_t":"고경희","list_price":"28000","title":"&lt;b&gt;HTML5&lt;\/b&gt;+CSS3 웹 표준의 정석(2017)","sale_price":"25200","pub_date":"20170103","ebook_barcode":"DGT00031918527IN","cover_s_url":"http:\/\/t1.daumcdn.net\/thumb\/R72x100\/?fname=http%3A%2F%2Ft1.daumcdn.net%2Fbook%2FBOK00031821542YE%3Fmoddttm=20170104090711","isbn13":"9791187370680","cover_l_url":"https:\/\/t1.search.daumcdn.net\/thumb\/R110x160\/?fname=http%3A%2F%2Ft1.daumcdn.net%2Fbook%2FBOK00031821542YE%3Fmoddttm=20170104090711","etc_author":"","category":"컴퓨터\/IT ","pub_nm":"이지스퍼블리싱","barcode":"BOK00031821542YE","sale_yn":"Y"}
+	              ,{"author":"윤인성","translator":"","isbn":"896848161X","link":"http:\/\/book.daum.net\/detail\/book.do?bookid=BOK00024379015YE","status_des":"정상판매","description":"2014년 10월 확정된 HTML5 표준안과 최신 웹 브라우저 환경에 맞춘 최신 개정판이다. 웹 디자인을 처음 배우는 독자에게 HTML5와 CSS3를 단계별로 학습하는 방법을 설명해준 후, 웹...","author_t":"윤인성","list_price":"30000","title":"&lt;b&gt;HTML5&lt;\/b&gt;+CSS3 입문","sale_price":"27000","pub_date":"20150121","ebook_barcode":"DGT4808968481611","cover_s_url":"http:\/\/t1.daumcdn.net\/thumb\/R72x100\/?fname=http%3A%2F%2Ft1.daumcdn.net%2Fbook%2FBOK00024379015YE%3Fmoddttm=20170104060412","isbn13":"9788968481611","cover_l_url":"https:\/\/t1.search.daumcdn.net\/thumb\/R110x160\/?fname=http%3A%2F%2Ft1.daumcdn.net%2Fbook%2FBOK00024379015YE%3Fmoddttm=20170104060412","etc_author":"","category":"컴퓨터\/IT ","pub_nm":"한빛미디어","barcode":"BOK00024379015YE","sale_yn":"Y"}
+	              ,{"author":"천인국","translator":"","isbn":"8992649207","link":"http:\/\/book.daum.net\/detail\/book.do?bookid=KOR9788992649209","status_des":"정상판매","description":"『HTML5 + CSS3 + JavaScript로 배우는 웹프로그래밍 기초』는 웹프로그래밍을 공부한다면 반드시 짚고 넘어가야 할 내용을 친절하게 설명한다. 가장 기초가 되는 HTML5와 CSS3, J...","author_t":"천인국","list_price":"28000","title":"&lt;b&gt;HTML5&lt;\/b&gt; + CSS3 + JavaScript로 배우는 웹프로그래밍...","sale_price":"26320","pub_date":"20131219","ebook_barcode":"","cover_s_url":"http:\/\/t1.daumcdn.net\/thumb\/R72x100\/?fname=http%3A%2F%2Ft1.daumcdn.net%2Fbook%2FKOR9788992649209%3Fmoddttm=20170104060412","isbn13":"9788992649209","cover_l_url":"https:\/\/t1.search.daumcdn.net\/thumb\/R110x160\/?fname=http%3A%2F%2Ft1.daumcdn.net%2Fbook%2FKOR9788992649209%3Fmoddttm=20170104060412","etc_author":"","category":"컴퓨터\/IT ","pub_nm":"인피니티북스","barcode":"KOR9788992649209","sale_yn":"Y"}
+	              ];
+	*/
 	
-	  function App_010() {
-	    _classCallCheck(this, App_010);
+	// Parent Component
+	var HiWorld = function (_React$Component) {
+	  _inherits(HiWorld, _React$Component);
 	
-	    return _possibleConstructorReturn(this, (App_010.__proto__ || Object.getPrototypeOf(App_010)).apply(this, arguments));
+	  function HiWorld() {
+	    _classCallCheck(this, HiWorld);
+	
+	    return _possibleConstructorReturn(this, (HiWorld.__proto__ || Object.getPrototypeOf(HiWorld)).apply(this, arguments));
 	  }
 	
-	  _createClass(App_010, [{
+	  _createClass(HiWorld, [{
 	    key: 'render',
+	    //...by12p.ref434p.
+	    //class HiWorld extends Component {
 	    value: function render() {
 	      return _react2.default.createElement(
 	        'div',
@@ -90,64 +101,111 @@
 	        _react2.default.createElement(
 	          'ul',
 	          null,
+	          _react2.default.createElement(List, { books: this.props.zjsonArrParse })
+	        )
+	      );
+	    }
+	  }]);
+	
+	  return HiWorld;
+	}(_react2.default.Component);
+	
+	// Child Component
+	
+	
+	var List = function (_React$Component2) {
+	  _inherits(List, _React$Component2);
+	
+	  function List() {
+	    _classCallCheck(this, List);
+	
+	    return _possibleConstructorReturn(this, (List.__proto__ || Object.getPrototypeOf(List)).apply(this, arguments));
+	  }
+	
+	  _createClass(List, [{
+	    key: 'render',
+	    value: function render() {
+	      var books = this.props.books.map(function (book) {
+	        return _react2.default.createElement(Book, { key: book.title,
+	          author: book.author,
+	          title: book.title,
+	          isbn: book.isbn });
+	      });
+	
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'list' },
+	        _react2.default.createElement(
+	          'h3',
+	          null,
+	          '== Book List =='
+	        ),
+	        books
+	      );
+	    }
+	  }]);
+	
+	  return List;
+	}(_react2.default.Component);
+	
+	;
+	
+	var Book = function (_React$Component3) {
+	  _inherits(Book, _React$Component3);
+	
+	  function Book() {
+	    _classCallCheck(this, Book);
+	
+	    return _possibleConstructorReturn(this, (Book.__proto__ || Object.getPrototypeOf(Book)).apply(this, arguments));
+	  }
+	
+	  _createClass(Book, [{
+	    key: 'render',
+	    value: function render() {
+	
+	      return (
+	        /*...Card 컴포넌트에 className 특성이 사용된 것에 주의할 것.
+	        JSX는 자바스크립트이므로 class 같은 XML 특성이 있는 식별자와 구분하기 위함.*/
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'book' },
 	          _react2.default.createElement(
-	            'h1',
-	            null,
-	            '^^Hi, ',
-	            this.props.zmessage
-	          ),
-	          _react2.default.createElement(
-	            ListItem,
-	            { quantity: '6' },
-	            'Bread'
-	          ),
-	          _react2.default.createElement(
-	            ListItem,
-	            { quantity: '30' },
-	            'Eggs : 0 EA.'
-	          ),
-	          _react2.default.createElement(
-	            ListItem,
-	            { quantity: '2' },
-	            'Milk'
+	            'div',
+	            { className: 'book__task' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'book__title' },
+	              'Title : ',
+	              this.props.title
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'book__author' },
+	              'Author : ',
+	              this.props.author
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'book__isbn' },
+	              'ISBN : ',
+	              this.props.isbn
+	            ),
+	            _react2.default.createElement('br', null),
+	            _react2.default.createElement('br', null),
+	            _react2.default.createElement('br', null)
 	          )
 	        )
 	      );
 	    }
 	  }]);
 	
-	  return App_010;
+	  return Book;
 	}(_react2.default.Component);
 	
-	var ListItem = function (_React$Component2) {
-	  _inherits(ListItem, _React$Component2);
-	
-	  function ListItem() {
-	    _classCallCheck(this, ListItem);
-	
-	    return _possibleConstructorReturn(this, (ListItem.__proto__ || Object.getPrototypeOf(ListItem)).apply(this, arguments));
-	  }
-	
-	  _createClass(ListItem, [{
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement(
-	        'li',
-	        null,
-	        this.props.quantity,
-	        ' \xD7 ',
-	        this.props.children
-	      );
-	    }
-	  }]);
-	
-	  return ListItem;
-	}(_react2.default.Component);
-	
-	//render(<App_010 />, document.getElementById('zroot')); //...방법1.
+	//render(<HiWorld />, document.getElementById('zroot')); //...방법1.
 	
 	
-	_reactDom2.default.render(_react2.default.createElement(App_010, { zmessage: zmessage }), document.getElementById('zroot')); //...방법2.
+	_reactDom2.default.render(_react2.default.createElement(HiWorld, { zjsonArrParse: zjsonArrParse }), document.getElementById('zroot')); //...방법2.
 
 /***/ },
 /* 1 */
