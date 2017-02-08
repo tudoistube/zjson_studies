@@ -2,8 +2,9 @@
 ##Reference Document : Self Summary on [Shared_ZJavaJsonReact](https://drive.google.com/open?id=1ajQ8ghW5v3eBNL1k753A9gjAiCvV1u_zxX65zV5rKmE "summarized by tudoistube@gmail" )  
 
 ###jsp_react : apply React.js to Servlet&JSP.
-####zjsp_json_react_step010
-####zjsp_json_react_step020
+####zjsp_json_react_step010 : Simple React Test in Servlet&JSP.  
+####zjsp_json_react_step020 : Using React.js to display JSON Data List.  
+####zjsp_json_react_step030 :   
 
     
 책 보면서 실습한 소스임.  
