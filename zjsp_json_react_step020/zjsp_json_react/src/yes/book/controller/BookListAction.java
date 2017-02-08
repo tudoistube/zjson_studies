@@ -18,8 +18,6 @@ import zjson.util.HttpClientGet;
 
 public class BookListAction implements Action {
 	
-	BookDAO bookDao = new BookDAO();	
-	 
 	 public ActionForward execute(HttpServletRequest request,HttpServletResponse response) throws Exception{	 
 		 
 		//...get json-data from daum api.
@@ -44,8 +42,6 @@ public class BookListAction implements Action {
 		//HttpSession session = request.getSession();
 		//session.setAttribute("session_list",list);
 		
-		//...commented since it is a simple test without connection to DB.
-		//boolean blResult = insertJson2Db(jsonArr);
 		boolean blResult = true;
 		String zresult = null;
 		
@@ -86,40 +82,6 @@ public class BookListAction implements Action {
 			JSONArray item = (JSONArray)channel.get("item");
 			
 			return item;
-			
-	 }
-	 
-	 private boolean insertJson2Db(JSONArray p_jsonArr) {
-		 
-		    boolean result = false;
-			
-		    for(int i=0; i<p_jsonArr.size(); i++)
-		    {
-		    	JSONObject imsi = (JSONObject) p_jsonArr.get(i);
-		    	
-		    	String book_isbn = (String)imsi.get("isbn");
-		    	String book_title = (String)imsi.get("title");
-		    	String book_author = (String)imsi.get("author_t");
-		    	String book_img = (String)imsi.get("cover_s_url");
-		    	String book_sale_price = (String)imsi.get("sale_price");
-		    	String book_description = (String)imsi.get("description");
-		    	String book_pub_date = (String)imsi.get("pub_date");
-
-		    	//BookDTO bookDto = new BookDTO(book_author, book_img, book_sale_price, book_description);
-		    	BookDTO bookDto = new BookDTO(book_isbn, book_title, book_author, book_img, book_sale_price, book_description, book_pub_date);
-		    	
-		    	//ArrayList<BookDTO> bookList : bookList.add(bookDto);
-		    	
-		    	result = bookDao.bookDtoInsert(bookDto);
-		    	
-		    	if(result==false){
-		    		System.out.println("failed to save Book : " + bookDto.toString());
-		    		break;
-		    	}
-		    		
-		    }//...E.for(int i=0; i<p_jsonArr.size(); i++)		    
-		    
-			return result;
 			
 	 }
 	 
