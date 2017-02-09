@@ -9,7 +9,7 @@
 
 
 ##java_web_00 : recipe to be cooked with json in jsp web dynamic project.  
-###Reference Document : Self Summary on [JSON Java App Self Summary, Shared_ZReact_Router](https://drive.google.com/open?id=1YeaNRvtddIXNG9K120ucD65vj9vQ8qLUpvpO8PN1RDk "Example Sources practised by tudoistube@gmail" )  
+###Reference Document : Self Summary on [JSON Java App Self Summary, Shared_ZSpringReact :: JspReact](https://docs.google.com/spreadsheets/d/16_7Pk9byKYa-obxdjzqzB94vvY7h4MvIGGptoOxPnBI/edit#gid=989485646 "Example Sources practised by tudoistube@gmail" )  
 
 
 ##java_web : basic usage of json in jsp web dynamic project.  
