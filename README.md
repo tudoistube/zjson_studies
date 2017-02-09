@@ -1,6 +1,6 @@
 #JSON on from Java application to Spring web... : recipe ^ ^  
 
-##jsp_web_00 : recipe to be cooked with json in jsp web dynamic project.  
+##java_web_00 : recipe to be cooked with json in jsp web dynamic project.  
 
 ##Reference Document : Self Summary on [JavaJson](https://drive.google.com/open?id=16_7Pk9byKYa-obxdjzqzB94vvY7h4MvIGGptoOxPnBI "summarized by tudoistube@gmail" )  
 
