@@ -1,7 +1,7 @@
 JSON on from Java application to Spring web... : master ^ ^  
 ================================
 
-#List of Branches  
+List of Branches  
 --------------------------------
 
 ## java_app : basic usage of json in java application.  
